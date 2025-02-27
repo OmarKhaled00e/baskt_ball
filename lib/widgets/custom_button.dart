@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key});
-
+  const CustomButton({super.key, required this.text, required this.onPressed});
+  final String text;
+  final Function() onPressed;
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
@@ -10,9 +11,9 @@ class CustomButton extends StatelessWidget {
         backgroundColor: Colors.orange,
         maximumSize: Size(150, 50),
       ),
-      onPressed: () {},
-      child: const Text(
-        'Add 1 Point',
+      onPressed: onPressed,
+      child: Text(
+        text,
         style: TextStyle(fontSize: 18, color: Colors.black),
       ),
     );
