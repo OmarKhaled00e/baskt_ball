@@ -30,7 +30,7 @@ class _HomeSecreanState extends State<HomeSecrean> {
               Column(
                 children: [
                   Text('Team A', style: TextStyle(fontSize: 42)),
-                  Text('$teamAPoints', style: TextStyle(fontSize: 150)),
+                  Text('$teamAPoints', style: TextStyle(fontSize: 85)),
                   SizedBox(height: 24),
                   CustomButton(
                     onPressed: () {
@@ -72,7 +72,7 @@ class _HomeSecreanState extends State<HomeSecrean> {
               Column(
                 children: [
                   Text('Team B', style: TextStyle(fontSize: 42)),
-                  Text('$teamBPoints', style: TextStyle(fontSize: 150)),
+                  Text('$teamBPoints', style: TextStyle(fontSize: 85)),
                   SizedBox(height: 24),
                   CustomButton(
                     onPressed: () {
