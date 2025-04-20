@@ -29,7 +29,10 @@ class HomePage extends StatelessWidget {
                   Column(
                     children: [
                       Text('Team A', style: TextStyle(fontSize: 42)),
-                      Text('${BlocProvider.of<CounterCubit>(context).teamAPoints}', style: TextStyle(fontSize: 85)),
+                      Text(
+                        '${BlocProvider.of<CounterCubit>(context).teamAPoints}',
+                        style: TextStyle(fontSize: 85),
+                      ),
                       SizedBox(height: 24),
                       CustomButton(
                         onPressed: () {
@@ -71,7 +74,10 @@ class HomePage extends StatelessWidget {
                   Column(
                     children: [
                       Text('Team B', style: TextStyle(fontSize: 42)),
-                      Text('${BlocProvider.of<CounterCubit>(context).teamBPoints}', style: TextStyle(fontSize: 85)),
+                      Text(
+                        '${BlocProvider.of<CounterCubit>(context).teamBPoints}',
+                        style: TextStyle(fontSize: 85),
+                      ),
                       SizedBox(height: 24),
                       CustomButton(
                         onPressed: () {
@@ -107,12 +113,7 @@ class HomePage extends StatelessWidget {
               CustomButton(
                 text: 'Resents',
                 onPressed: () {
-                  BlocProvider.of<CounterCubit>(
-                    context,
-                  ).TeamIncrement(team: 'A', buttonNumber: 0);
-                  BlocProvider.of<CounterCubit>(
-                    context,
-                  ).TeamIncrement(team: 'B', buttonNumber: 0);
+                  BlocProvider.of<CounterCubit>(context).reset();
                 },
               ),
             ],

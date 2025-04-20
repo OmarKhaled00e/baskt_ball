@@ -2,7 +2,7 @@ import 'package:baskt_ball/cubit/counter_state.dart';
 import 'package:bloc/bloc.dart';
 
 class CounterCubit extends Cubit<CounterState> {
-  CounterCubit():super(CounterAIncrementState());
+  CounterCubit() : super(CounterAIncrementState());
 
   int teamAPoints = 0;
   int teamBPoints = 0;
@@ -15,5 +15,11 @@ class CounterCubit extends Cubit<CounterState> {
       teamBPoints += buttonNumber;
       emit(CounterBIncrementState());
     }
+  }
+
+  void reset() {
+    teamAPoints = 0;
+    teamBPoints = 0;
+    emit(CounterAIncrementState());
   }
 }
