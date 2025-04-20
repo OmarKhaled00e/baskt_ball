@@ -12,7 +12,7 @@ class BasktBall extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeSecrean(),
+      home: HomePage(),
     );
   }
 }
